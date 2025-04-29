@@ -10,7 +10,7 @@ $(document).ready(function () {
             data : JSON.stringify({index : data_index}),
             success : function(response){
                 console.log("success:", response);
-                if(response.validMove === "true"){
+                if(response.validMove){
                     RenderBoard(response)
                 }
                 else{
