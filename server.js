@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const game = new TicTacToeGame();
 
 app.get("/", (req, res) => {
+    game.reset();
     res.render("index.ejs");
 });
 
